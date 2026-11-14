@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <a href="#home" className="font-mono font-bold text-lg tracking-wider">
               <span className="text-accent-red">ADITYA</span>
-              <span className="text-text-secondary">.K</span>
+              <span className="text-text-primary ml-1.5">KUMAR</span>
             </a>
           </div>
 

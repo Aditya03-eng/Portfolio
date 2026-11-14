@@ -20,7 +20,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <a href="#home" className="font-mono font-bold text-lg tracking-wider">
             <span className="text-accent-red">ADITYA</span>
-            <span className="text-text-secondary">.K</span>
+            <span className="text-text-primary ml-1.5">KUMAR</span>
           </a>
 
           {/* Desktop nav */}
@@ -40,8 +40,9 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-text-secondary hover:text-text-primary transition-colors"
-            aria-label="Toggle menu"
+            className="md:hidden text-text-secondary hover:text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-red p-1 rounded transition-colors"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>

@@ -19,7 +19,7 @@ export default function About() {
           {/* Left */}
           <div>
             <p className="text-text-secondary leading-relaxed mb-6">
-              I'm a Computer Science Engineering student at {personalInfo.education.university}, passionate about using technology to solve real-world problems. My interests span across software development, artificial intelligence, data analytics, and web development.
+              I'm <span className="text-text-primary font-medium">Aditya Kumar</span>, a Computer Science Engineering student at {personalInfo.education.university}, passionate about using technology to solve real-world problems. My interests span across software development, artificial intelligence, data analytics, and web development.
             </p>
             <p className="text-text-secondary leading-relaxed">
               I enjoy building practical projects that combine clean engineering with intelligent systems — from full-stack platforms to machine learning applications.

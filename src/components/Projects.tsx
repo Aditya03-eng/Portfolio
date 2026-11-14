@@ -75,12 +75,24 @@ export default function Projects() {
             <div key={project.title} className="project-card p-5 bg-bg-card rounded-lg border border-white/5 flex flex-col">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-lg font-bold text-text-primary">{project.title}</h3>
-                <div className="flex items-center gap-2">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary transition-colors" aria-label={`${project.title} GitHub`}>
+                <div className="flex items-center gap-1">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-1.5 text-text-secondary hover:text-text-primary focus:outline-none focus-visible:ring-1 focus-visible:ring-accent-red rounded transition-colors"
+                    aria-label={`${project.title} GitHub repository`}
+                  >
                     <Github size={16} />
                   </a>
                   {project.live && (
-                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent-cyan transition-colors" aria-label={`${project.title} Live Demo`}>
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-1.5 text-text-secondary hover:text-accent-cyan focus:outline-none focus-visible:ring-1 focus-visible:ring-accent-cyan rounded transition-colors"
+                      aria-label={`${project.title} Live Demo`}
+                    >
                       <ExternalLink size={16} />
                     </a>
                   )}

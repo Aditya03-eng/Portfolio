@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="hero-reveal flex items-center justify-center gap-2 mb-8">
           <span className="w-2 h-2 rounded-full bg-accent-red animate-pulse" />
           <span className="font-mono text-xs text-text-secondary tracking-widest uppercase">
-            B.Tech CSE • {personalInfo.education.university}
+            Aditya Kumar • B.Tech CSE • {personalInfo.education.university}
           </span>
         </div>
 

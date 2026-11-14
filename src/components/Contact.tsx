@@ -15,7 +15,7 @@ export default function Contact() {
         </div>
 
         <p className="text-text-secondary leading-relaxed mb-10 max-w-xl mx-auto">
-          I'm always open to new opportunities, collaborations, and conversations about technology. Feel free to reach out through any of the channels below.
+          Have a question or want to collaborate with <span className="text-text-primary font-medium">Aditya Kumar</span>? Feel free to reach out through any of the channels below.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
