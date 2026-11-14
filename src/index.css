@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base Styles ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #292929 #080808;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #080808;
+  color: #F5F5F5;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #292929;
+  border-radius: 3px;
+}
+
+/* ── Animations ── */
+@keyframes heroReveal {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lineExpand {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.03; }
+  50% { opacity: 0.06; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.hero-reveal {
+  animation: heroReveal 0.8s ease-out forwards;
+}
+
+.hero-reveal-delay-1 {
+  animation: heroReveal 0.8s ease-out 0.15s forwards;
+  opacity: 0;
+}
+
+.hero-reveal-delay-2 {
+  animation: heroReveal 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.hero-reveal-delay-3 {
+  animation: heroReveal 0.8s ease-out 0.45s forwards;
+  opacity: 0;
+}
+
+.line-expand {
+  animation: lineExpand 1s ease-out 0.6s forwards;
+  width: 0;
+}
+
+.cursor-blink::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+  color: #FF3030;
+  font-weight: 300;
+}
+
+/* ── Section entrance animation ── */
+.section-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Grid background ── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridPulse 6s ease-in-out infinite;
+}
+
+/* ── Floating decoration ── */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ── Card hover ── */
+.project-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 48, 48, 0.3);
+  box-shadow: 0 8px 30px rgba(255, 48, 48, 0.08);
+}
+
+/* ── Skill bar animation ── */
+.skill-bar {
+  transition: width 1s ease-out;
+}
+
+/* ── Button styles ── */
+.btn-primary {
+  @apply inline-flex items-center gap-2 px-6 py-3 bg-accent-red text-white font-medium rounded-md
+         transition-all duration-300 hover:bg-red-600 hover:shadow-lg hover:shadow-red-900/20;
+}
+
+.btn-outline {
+  @apply inline-flex items-center gap-2 px-6 py-3 border border-white/10 text-text-secondary font-medium rounded-md
+         transition-all duration-300 hover:border-accent-red/50 hover:text-text-primary;
+}
+
+/* ── Reduce motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
